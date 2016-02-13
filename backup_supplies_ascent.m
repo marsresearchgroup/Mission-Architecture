@@ -1,0 +1,6 @@
+function [ascent_backup_supplies] = backup_supplies_ascent(backupdays_supplies_ascent_vehicle,oxygen_perday_space,water_perday_space,food_perday_space,pep_to_surface);
+backup_oxygen = backupdays_supplies_ascent_vehicle*oxygen_perday_space*pep_to_surface;
+backup_food = backupdays_supplies_ascent_vehicle*food_perday_space*pep_to_surface;
+backup_water = backupdays_supplies_ascent_vehicle*water_perday_space*pep_to_surface;
+ascent_backup_supplies = backup_oxygen + backup_food + backup_water;
+end
