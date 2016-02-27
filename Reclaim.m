@@ -20,7 +20,7 @@ for i = 1:offset(1,1)
     H2O = .6919*m1;
     
     %%% Implement Recycling
-    water = water - water_d*offset(2,1)e*water_r/100;
+    water = water - water_d*offset(2,1)*water_r/100;
     oxygen = oxygen - O2;
     O2s = O2s + O2;
 end
