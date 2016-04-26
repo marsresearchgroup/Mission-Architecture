@@ -1,3 +1,6 @@
+% Calculates the overall mass of habitat + EDL system vs. mass of habitat +
+% EDL system for individual pod.
+
 clear all;
 i = 0;
 [No_Astronauts,length_No_Astronauts,StayTime,length_StayTime,Efficiency,length_Efficiency] = readin();

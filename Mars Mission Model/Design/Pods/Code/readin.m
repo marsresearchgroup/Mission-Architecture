@@ -4,11 +4,10 @@ iterate=input('Would you like to iterate parameters? (yes/no) \n','s');
 if strcmp(iterate,'yes')==1
 fprintf('Possible Parameters are: No_Astronauts, StayTime, Efficiency\n')
 parameter1=input('Which parameter would you like to iterate?\n','s');
-parameter2=input('Which other parameter would you like to iterate?\n','s');
 end
 
 %number of astronauts
-if strcmp(parameter1,'No_Astronauts')==1 || strcmp(parameter2,'No_Astronauts')==1 
+if strcmp(parameter1,'No_Astronauts')==1 
     No_Astronauts=data(1,:);
     for i = 1:length(No_Astronauts)
         if (No_Astronauts(i) < inf) == 0
@@ -21,7 +20,7 @@ else
 end
 
 %stay time
-if strcmp(parameter1,'StayTime')==1 || strcmp(parameter2,'StayTime')==1
+if strcmp(parameter1,'StayTime')==1 
     StayTime=data(2,:);
     for i = 1:length(StayTime)
         if (StayTime(i) < inf) == 0
@@ -34,7 +33,7 @@ else
 end
 
 %efficiency
-if strcmp(parameter1,'Efficiency')==1 || strcmp(parameter2,'Efficiency')==1  
+if strcmp(parameter1,'Efficiency')==1 
     Efficiency=data(3,:);
     for i = 1:length(Efficiency)
         if (Efficiency(i) < inf) == 0

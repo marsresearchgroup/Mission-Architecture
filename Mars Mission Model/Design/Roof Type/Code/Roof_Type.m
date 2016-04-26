@@ -1,3 +1,6 @@
+% Compare habitat mass for inflatable ceiling vs. Solid Ceiling vs. either
+% number of astronauts or stay time.
+
 clear all;
 i = 0;
 [No_Astronauts,length_No_Astronauts,StayTime,length_StayTime,Efficiency,length_Efficiency] = readin();
