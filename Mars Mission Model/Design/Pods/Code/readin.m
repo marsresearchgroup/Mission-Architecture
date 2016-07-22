@@ -1,5 +1,5 @@
 function [No_Astronauts,length_No_Astronauts,StayTime,length_StayTime,Efficiency,length_Efficiency] = readin()
-data=importdata('master_text.txt');
+data=importdata('master_text.txt')
 iterate=input('Would you like to iterate parameters? (yes/no) \n','s');
 if strcmp(iterate,'yes')==1
 fprintf('Possible Parameters are: No_Astronauts, StayTime, Efficiency\n')

@@ -38,8 +38,9 @@ oxygen_percent_habitat = 22;
 % radius_height_ratio = input('What is the radius to height ratio of the habitat? ');
 % thickness = input('What is the thickness of the habitat wall? ');
 density_heavy = 4800;
-density_light = 1400;
-thickness = .05;
+density_light = 135.427;
+thickness_light = .46;
+thickness_heavy = .1;
 
 connector_diameter = 2.5;
 mass_connector = 250;

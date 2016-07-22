@@ -31,8 +31,8 @@ for q = 1:length(i);
         E = i(q);
     end
     volume_habitat = volume_hab(pep_to_surface,days_surface,offset);
-    [mass_habitatI,~] = HabitatVolume2Mass_Inflatable(volume_habitat,density_heavy,density_light,thickness,connector_diameter,mass_connector);
-    [mass_habitatS,~] = HabitatVolume2Mass_Solid(volume_habitat,density_heavy,density_light,thickness,connector_diameter,mass_connector);
+    [mass_habitatI,~] = HabitatVolume2Mass_Inflatable(volume_habitat,density_heavy,density_light,thickness_light,thickness_heavy,connector_diameter,mass_connector);
+    [mass_habitatS,~] = HabitatVolume2Mass_Solid(volume_habitat,density_heavy,density_light,thickness_light,thickness_heavy,connector_diameter,mass_connector);
     x(q,:) = mass_habitatI;
     xx(q,:) = mass_habitatS;
     r = r+1;

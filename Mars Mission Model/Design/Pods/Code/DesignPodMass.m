@@ -1,8 +1,13 @@
+volume_habitat,density1,density2,thickness_light,thickness_heavy,connector_diameter,mass_connector
+volume_habitat = 107;
+density1 = 
+
+
 %%% Inputs %%%
 SA_connector = 1.5^2*pi;
 mass_connector = 250; 
-pressurized_volume =93.3678;
-thickness = .04;
+pressurized_volume = 107.7868;
+thickness = .05;
 density1 = 4800;
 density2 = 1400;
 mass = zeros(1,6);

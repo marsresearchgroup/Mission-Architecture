@@ -31,9 +31,12 @@ for q = 1:length(i);
         E = i(q);
     end
     volume_habitat = volume_hab(pep_to_surface,days_surface,offset);
-    [mass,mass_pod] = Design_Pod_Mass(volume_habitat,density_heavy,density_light,thickness,connector_diameter,mass_connector);
+    [mass,massp,mmm,www,hhh,lll] = Design_Pod_Mass(volume_habitat,density_heavy,density_light,thickness_light,thickness_heavy,connector_diameter,mass_connector);
     x(q,:) = mass;
-    xx(q,:) = mass_pod;
+    xx(q,:) = massp;
+    xxx(q,:) = mmm;
+    xxxx(q,:) = www;
+    xxxxx(q,:) = hhh;
     r = r+1;
 end
 if ii == 0
@@ -79,16 +82,23 @@ if ii == 0
     legend(leg);
 end
 if ii == 1
-    x1 = x(1,:);
+ x1 = x(1,:);
     x2 = x(2,:);
     x3 = x(3,:);
-    x4 = xx(1,:);
-    x5 = xx(2,:);
-    x6 = xx(3,:);
+    x4 = x(4,:);
+    x5 = x(5,:);
+    x6 = xx(1,:);
+    x7 = xx(2,:);
+    x8 = xx(3,:);
+    x9 = xx(4,:);
+    x10 = xx(5,:);
+    
     plot([1 2 3 4 5 6],x1,'b');
     hold on;
     plot([1 2 3 4 5 6],x2,'r');
     plot([1 2 3 4 5 6],x3,'g');
+    plot([1 2 3 4 5 6],x4,'k');
+    plot([1 2 3 4 5 6],x5,'m');
     g = 'Overall Habitat Mass';
     h = 'No of Pods';
     title([g,' vs. ',h]);
@@ -99,10 +109,12 @@ if ii == 1
     end
     legend(leg);
     figure;
-    plot([1 2 3 4 5 6],x4,'k');
-    hold on;
-    plot([1 2 3 4 5 6],x5,'m');
     plot([1 2 3 4 5 6],x6,'b');
+    hold on;
+    plot([1 2 3 4 5 6],x7,'r');
+    plot([1 2 3 4 5 6],x8,'g');
+    plot([1 2 3 4 5 6],x9,'k');
+    plot([1 2 3 4 5 6],x10,'m');
     g = 'Mass per Pod';
     h = 'No of Pods';
     title([g,' vs. ',h]);

@@ -1,4 +1,4 @@
-function [mass,surface_area]=HabitatVolume2Mass_Inflatable(pressurized_volume,density1,density2, thickness,connector_diameter,mass_connector)
+function [mass,surface_area]=HabitatVolume2Mass_Inflatable(pressurized_volume,density1,density2, thickness_light,thickness_heavy,connector_diameter,mass_connector)
 %   [Function Name] = HabitatVolume2Mass
 %   [Function Purpose] = To calculate the mass of the habitat depending on
 %   the required pressurized volume. Uses the shape of the habitat as a
@@ -11,7 +11,8 @@ function [mass,surface_area]=HabitatVolume2Mass_Inflatable(pressurized_volume,de
 %     body) in (kg/m^3)
 %     density1 = (density of the material used for the semispherical 
 %     ceiling ) in (kg/m^3)
-%     thickness = (thickness of the habitat walls) in (m)
+%     thickness_heavy = (thickness of the habitat walls solid part) in (m)
+%     thickness_light = (thickness of the habitat walls light part) in (m)
 %   Outputs
 %     mass = (mass of the habitat) in (kg)
 %     surface_area = (surface area of the habitat) in (m^2)
@@ -50,9 +51,9 @@ for N_pods = [1 2 3 4 5 6]
             SA_used_connector = nc*SA_connector;
             dl = SA_used_connector/(2*h(i)+w(j));
             l = l+dl;
-            Vfloor = l*w(j)*thickness;
-            Vwall = (l*h(i)+w(j)*h(i))*thickness;
-            Vceil = pi*((w(j)/2+thickness)^2-(w(j)/2)^2)*l;
+            Vfloor = l*w(j)*thickness_heavy;
+            Vwall = (l*h(i)+w(j)*h(i))*thickness_heavy;
+            Vceil = pi*((w(j)/2+thickness_light)^2-(w(j)/2)^2)*l;
             mass_habitat = density1*(Vfloor+Vwall*2)+density2*Vceil;
             mass_module = mass_habitat + nc*mass_connector;
             % pause(20)

@@ -12,7 +12,7 @@
 pep_to_surface = 4;
 offset(1,1) = 7;
 offset(2,1) = 2;
-days_surface = 30;
+days_surface = 40;
 average_astro_mass = 80;
 astro_left_behind = 1;
 
@@ -25,7 +25,7 @@ water_recycle_lim = 10;
 mass_oxygen_recycler = 1000; % combo of Sabatier and Electrolysis machines - https://en.wikipedia.org/wiki/Sabatier_reaction#Manufacturing_propellant_on_Mars 
 mass_water_recycler = 1032.9; % From NASA Life Support Document
 oxygen_perday_surface = .84; % Assuming same as on Earth
-water_perday_surface = 14; % Assuming same as on Earth
+water_perday_surface = 1.4; % Assuming same as on Earth
 food_perday_surface = 1.77; % Assuming same as on Earth
 oxygen_perday_space = .84; % All three values (food, water, oxygen) - https://www.nasa.gov/pdf/146558main_RecyclingEDA(final)%204_10_06.pdf 
 water_perday_space = 2.42;
@@ -37,12 +37,13 @@ oxygen_percent_habitat = 22;
 % density = input('What is the density of the material for the habitat? ');
 % radius_height_ratio = input('What is the radius to height ratio of the habitat? ');
 % thickness = input('What is the thickness of the habitat wall? ');
-density_heavy = 4800;
-density_light = 1400;
-thickness = .05;
+density_heavy = 2700;
+density_light = 135.427;
+thickness_light = .46;
+thickness_heavy = .05;
 
-connector_diameter = 2.5;
-mass_connector = 250;
+connector_diameter = 1.5;
+mass_connector = 200;
 
 
 mass_science = 200;  %estimation

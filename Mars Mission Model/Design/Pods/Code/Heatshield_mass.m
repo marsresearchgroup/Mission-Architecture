@@ -1,4 +1,23 @@
 function [tps_totalmass] = Heatshield_mass(entrymass,dia)
+%   [Function Name] = Heatshield_mass
+%   [Function Purpose] = to calculate the mass of the heatshield 
+%   [Author] = Ravi Lumba
+%   Inputs
+%     entrymass = (mass of pod) in (kg)
+%     dia = (diameter of entry module) in (m)
+%   Outputs
+%     tps_totalmass = (mass of heashield) in (kg)
+ 
+%   ========
+%   February 29, 2016 
+%   ===============================================================
+%   Copyright 2016 by Dr. Hans Mark.  All rights reserved.
+
+
+
+
+
+
 %%%%%REMEMBER TO REMOVE TITLES%%%%%
 
 %%%CONSTANTS%%%
